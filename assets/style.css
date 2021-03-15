@@ -10,6 +10,9 @@ body{
   background: #ececf9;
 }
 
+.dark-mode{
+  background: #000000;
+}
 
 /* UTILS */
 .container{
@@ -34,7 +37,7 @@ body{
 }
 
 .logo{
-  font-size: 2rem;
+  font-size: 2em;
   color: #4E5F82;
   font-weight: normal;
 }
@@ -45,12 +48,6 @@ body{
   align-self: center;
   width: 50%;
 }
-.form i{
-  position: absolute;
-  left: 10px;
-  align-self: center;
-  color: var(--color-primary);
-}
 .form input{
   width: 100%;
   height: 50px;
@@ -58,11 +55,24 @@ body{
   border-radius: 35px;
   border: 1px solid #f2f3f3;
   color: var(--color-primary);
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1.125rem;
+  position: relative;
+  
+  padding-right: 110px;
 }
+
+.form i{
+  left: 10px;
+  align-self: center;
+  color: var(--color-primary);
+  z-index: 100;
+  position: absolute;
+}
+
 .form input::placeholder{
   color: var(--color-primary);
+  font-size: 1em;
 }
 
 .form input:focus{
@@ -77,12 +87,13 @@ body{
   right: 0;
   align-self: center;
   width: 110px;
-  height: 100%;
+  height: 80%;
   border-radius: 35px;
   border: none;
   background-color: #FF6631;
   font-weight: bold;
   color: #FCFCFD;
+  user-select: none;
 }
 
 /* FIM DO CABEÇALHO */
@@ -169,7 +180,36 @@ body{
   color: #4e4efe;
 }
 
+
+
 @media (max-width: 768px){
+  body{
+    font-size: 93.3%;
+  }
+  .header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 150px;
+    padding: 0 .5rem;
+    margin-top: 20px;
+  }
+  .form{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .form input{
+    height: 40px;
+    padding-right: 60px;
+  }
+  .form button{
+    width: auto;
+    height: 80%;
+    padding: 3px;
+    font-size: 10px;
+    right: 5px;
+  }
+
   .grid{
     display: grid;
     grid-auto-flow: row;
